@@ -43,14 +43,23 @@ a {
 .emoji-container{
 	text-align: center;
 	font-size: 30px;
-
-
 }
 
-input[type="radio"]{
-	display:none;
+.emoji-container, textarea
+{
+	resize: none;
 }
 
-input[type="radio"]:checked{
-	background-color: chocolate;
+#emoji-happy:checked ~ .happy,
+#emoji-meh:checked ~ .meh,
+#emoji-unhappy:checked ~ .unhappy,
+#emoji-sad:checked ~ .sad,
+#emoji-angry:checked ~ .angry
+{
+	background-color: #111;
+}
+
+#emoji-happy~.happy
+{
+	background-color: #111;
 }

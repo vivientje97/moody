@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import App from '@/App.vue';
 import '@/styles/index.scss'
+import { createPinia } from 'pinia'
 
 const routes = [
 	{
@@ -41,3 +42,4 @@ router.beforeEach((to, from) => {
 const app = createApp(App);
 app.use(router);
 app.mount('#app');
+app.use(createPinia());
