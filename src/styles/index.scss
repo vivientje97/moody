@@ -43,5 +43,14 @@ a {
 .emoji-container{
 	text-align: center;
 	font-size: 30px;
+
+
 }
 
+input[type="radio"]{
+	display:none;
+}
+
+input[type="radio"]:checked{
+	background-color: chocolate;
+}

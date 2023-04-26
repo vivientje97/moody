@@ -3,22 +3,22 @@
 		<h2>Home</h2>
 		<div class="pure-g center">
 			<div class="container">
-				<form class="pure-form container-form">
+				<form class="pure-form">
 					<div class="pure-g emoji-container">
 						<label for="emoji-happy" class="pure-u-1-5">
-							<input type="radio"><p>😀</p>
+							<input id="emoji-happy" type="radio">😀
 						</label>
 						<label for="emoji-meh" class="pure-u-1-5">
-							<input type="radio"><p>😕</p>
+							<input id="emoji-meh" type="radio">😕
 						</label>
 						<label for="emoji-unhappy" class="pure-u-1-5">
-							<input type="radio"><p>🙁</p>
+							<input id="emoji-unhappy" type="radio">🙁
 						</label>
 						<label for="emoji-sad" class="pure-u-1-5">
-							<input type="radio"><p>😢</p>
+							<input id="emoji-sad" type="radio">😢
 						</label>
 						<label for="emoji-angry" class="pure-u-1-5">
-							<input type="radio"><p>😠</p>
+							<input id="emoji-angry" type="radio">😠
 						</label>
 					</div>
 					<fieldset class="pure-group">
