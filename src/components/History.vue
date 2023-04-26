@@ -3,33 +3,44 @@
 		<h2>History</h2>
 		<div class="pure-g center">
 			<div class="container">
-				<form class="pure-form">
-					<div class="pure-g emoji-container">
-						<label for="emoji-happy" class="happy pure-u-1-5">
-							<input class="radio" id="emoji-happy" value="happy" name="emoji" type="radio">😀
-						</label>
-						<label for="emoji-meh" class="meh pure-u-1-5">
-							<input class="radio" id="emoji-meh" value="meh" name="emoji" type="radio">😕
-						</label>
-						<label for="emoji-unhappy" class="unhappy pure-u-1-5">
-							<input class="radio" id="emoji-unhappy" value="unhappy" name="emoji" type="radio">🙁
-						</label>
-						<label for="emoji-sad" class="sad pure-u-1-5">
-							<input class="radio" id="emoji-sad" value="sad" name="emoji" type="radio">😢
-						</label>
-						<label for="emoji-angry" class="angry pure-u-1-5">
-							<input class="radio" id="emoji-angry" value="angry" name="emoji" type="radio">😠
-						</label>
+				<thead>
+					<th>Emoji</th>
+					<th>Date</th>
+				</thead>
+				<tr v-for="mood in moodStore.moods" :key="mood.id">
+					<td>{{ mood.emoji }}</td>
+					<td>{{ mood.date }}</td>
+				</tr>
+					<div v-for="mood in moodStore.moods" :key="mood.id" class="pure-g emoji-container">
+						<div  class="pure-u-1-2">
+							{{ mood.emoji }}
+						</div>
+						<div class="pure-u-1-2">
+							{{ mood.date }}
+						</div>
 					</div>
-					<button type="submit" class="pure-button pure-input-1-3 pure-button-primary" @click="emojiStore.addMood( )">Submit</button>
-				</form>
+				<button type="submit" class="pure-button pure-input-1-3 pure-button-primary" >Details</button>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+import { useMoodList } from '../stores/MoodList.js'
+import { mapStores } from 'pinia'
+
 export default {
-	name: 'History'
+	name: 'History',
+
+	data() {
+		// return {
+		// 	moods: [{ description: 'Foo', emoji: '🙂' }, { description: 'Bar', emoji: 'emoji-sad' }]
+		// }
+	},
+
+	computed: {
+		...mapStores(useMoodList),
+	},
+
 }
 </script>

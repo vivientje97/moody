@@ -23,7 +23,7 @@
 							</label>
 						</div>
 
-						<textarea class="pure-input-1" placeholder="Textareas work too"></textarea>
+						<textarea class="pure-input-1" id="description" placeholder="Textareas work too"></textarea>
 
 						<button type="submit" class="pure-button pure-input-1-3 pure-button-primary" @click="emojiStore.addMood( )">Submit</button>
 					</fieldset>
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import { useMoodList } from '../stores/ProductStore.js'
+import { useMoodList } from '../stores/MoodList.js'
 import { mapStores } from 'pinia'
 
 export default {

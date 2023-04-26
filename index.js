@@ -18,7 +18,7 @@ const routes = [
 	{
 		path: '/History/:date',
 		name: 'historydetails',
-		component: () => import('@/components/History.vue'),
+		component: () => import('@/components/HistoryDetails.vue'),
 	},
 	{
 		path: '/About',
