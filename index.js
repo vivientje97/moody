@@ -10,12 +10,17 @@ const routes = [
 		component: () => import('@/components/Home.vue'),
 	},
 	{
-		path: '/',
+		path: '/History',
 		name: 'history',
 		component: () => import('@/components/History.vue'),
 	},
 	{
-		path: '/',
+		path: '/History/:date',
+		name: 'historydetails',
+		component: () => import('@/components/History.vue'),
+	},
+	{
+		path: '/About',
 		name: 'about',
 		component: () => import('@/components/About.vue'),
 	},
