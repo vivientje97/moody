@@ -1,8 +1,6 @@
 <template>
     <div>
-		<h1>
-			History
-		</h1>
+		<h2>History</h2>
 	</div>
 </template>
 
